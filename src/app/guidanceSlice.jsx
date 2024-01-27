@@ -1,17 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const initialState = {
+	lastUpdatedState: null,
+	guidance: "Hello world",
+};
+
 export const guidanceSlice = createSlice({
 	name: "guidance",
-	initialState: { guidance: "" },
+	initialState,
 	reducers: {
-		updateGuidance: (state, action) => {
-			return {
-				...state,
-				guidance: action.payload,
-			};
+		updateLastUpdatedStateAndGuidance: (state, action) => {
+			state.lastUpdatedState = action.payload.state;
+			state.guidance = action.payload.guidance;
 		},
 	},
 });
 
-export const { updateGuidance } = guidanceSlice.actions;
+export const { updateLastUpdatedStateAndGuidance } = guidanceSlice.actions;
 export default guidanceSlice.reducer;

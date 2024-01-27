@@ -1,8 +1,8 @@
-import {} from "react";
 import Navigation from "./components/Navigation";
 import "./App.css";
 import Steps from "./components/Steps";
 import NameField from "./components/NameField";
+import Guidance from "./components/Guidance";
 
 function App() {
 	return (
@@ -16,8 +16,10 @@ function App() {
 					<Steps />
 				</div>
 			</div>
-			<div className='mt-20 flex items-center justify-center'>
-				<p>Hello World</p>
+			<div className='mt-20 flex items-center justify-center '>
+				<div className='w-full max-w-xl'>
+					<Guidance />
+				</div>
 			</div>
 		</>
 	);

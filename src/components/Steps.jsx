@@ -18,7 +18,7 @@ const Tabs = () => {
 						selectedItem === "item1"
 							? "active text-blue-500 border-r border-blue-500 font-bold"
 							: "text-black"
-					} p-3 hover:bg-gray-200 transition-colors duration-200 text-center cursor-pointer w-40 rounded-tl-2xl rounded-bl-2xl`}
+					} p-3 hover:bg-gray-200 transition-colors duration-200 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
 					onClick={() => handleItemClick("item1")}>
 					Research Design
 				</div>
@@ -27,7 +27,7 @@ const Tabs = () => {
 						selectedItem === "item2"
 							? "active text-blue-500 border-r border-blue-500 font-bold"
 							: "text-black"
-					} p-3 hover:bg-gray-200 transition-colors duration-200 text-center cursor-pointer w-40 rounded-tl-2xl rounded-bl-2xl`}
+					} p-3 hover:bg-gray-200 transition-colors duration-200 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
 					onClick={() => handleItemClick("item2")}>
 					Data Analysis
 				</div>
@@ -36,7 +36,7 @@ const Tabs = () => {
 						selectedItem === "item3"
 							? "active text-blue-500 border-r border-blue-500 font-bold"
 							: "text-black"
-					} p-3 hover:bg-gray-200 transition-colors duration-200 text-center cursor-pointer w-40 rounded-tl-2xl rounded-bl-2xl`}
+					} p-3 hover:bg-gray-200 transition-colors duration-200 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
 					onClick={() => handleItemClick("item3")}>
 					Conclusion
 				</div>
@@ -45,7 +45,7 @@ const Tabs = () => {
 						selectedItem === "item4"
 							? "active text-blue-500 border-r border-blue-500 font-bold"
 							: "text-black"
-					} p-3 hover:bg-gray-200 transition-colors duration-200 text-center cursor-pointer w-40 rounded-tl-2xl rounded-bl-2xl`}
+					} p-3 hover:bg-gray-200 transition-colors duration-200 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
 					onClick={() => handleItemClick("item4")}>
 					Evaluation
 				</div>

@@ -14,7 +14,7 @@ function NameField() {
 				value={name}
 				id='name'
 				className='block w-full border-0 p-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 text-center'
-				placeholder='Name or Candidate Number'
+				placeholder='Name / Candidate Number'
 				onChange={handleNameChange}
 			/>
 		</div>

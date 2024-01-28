@@ -3,6 +3,7 @@ import "./App.css";
 import Steps from "./components/Steps";
 import NameField from "./components/NameField";
 import Guidance from "./components/Guidance";
+import OverlayText from "./components/OverlayText";
 
 function App() {
 	return (
@@ -21,6 +22,7 @@ function App() {
 					<Guidance />
 				</div>
 			</div>
+			<OverlayText />
 		</>
 	);
 }

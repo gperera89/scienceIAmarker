@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 const navigation = [
-	{ name: "App", href: "#" },
-	{ name: "How to Use", href: "#" },
-	{ name: "About", href: "#" },
+	{ name: "App", href: "/" },
+	{ name: "How to Use", href: "/how-to" },
+	{ name: "Contact", href: "/contact" },
 ];
 
 export default function Example() {
@@ -19,12 +20,12 @@ export default function Example() {
 				<div className='flex flex-1'>
 					<div className='hidden lg:flex lg:gap-x-12'>
 						{navigation.map((item) => (
-							<a
+							<Link
 								key={item.name}
-								href={item.href}
-								className='text-sm font-semibold leading-6 text-gray-900'>
+								to={item.href}
+								className='text-sm font-semibold leading-6 text-gray-900 hover:font-bold'>
 								{item.name}
-							</a>
+							</Link>
 						))}
 					</div>
 					<div className='flex lg:hidden'>
@@ -37,17 +38,21 @@ export default function Example() {
 						</button>
 					</div>
 				</div>
-				<a href='#' className='-m-1.5 p-1.5'>
+				<a href='/' className='-m-1.5 p-1.5'>
 					<span className='sr-only'>Science IA Marker</span>
 					<img
-						className='h-8 w-auto'
-						src='public/logo192.png'
+						className='h-10 w-auto'
+						src='/logo192.png'
 						alt='Science IA Marker Logo'
 					/>
 				</a>
 				<div className='flex flex-1 justify-end'>
-					<a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
-						Subject
+					<a
+						href='https://xmltwo.ibo.org/publications/DP/Group4/d_4_biolo_gui_2302_1/dp_biology_IA_criteria_en.pdf'
+						target='_blank'
+						rel='noopener noreferrer'
+						className='text-sm font-semibold leading-6 text-gray-900 hover:font-bold'>
+						IA Criteria
 					</a>
 				</div>
 			</nav>
@@ -68,19 +73,21 @@ export default function Example() {
 								<XMarkIcon className='h-6 w-6' aria-hidden='true' />
 							</button>
 						</div>
-						<a href='#' className='-m-1.5 p-1.5'>
+						<a href='/' className='-m-1.5 p-1.5'>
 							<span className='sr-only'>Science IA Marker</span>
 							<img
-								className='h-8 w-auto'
-								src='public/logo192.png'
+								className='h-10 w-auto'
+								src='/logo192.png'
 								alt='Science IA Marker Logo'
 							/>
 						</a>
 						<div className='flex flex-1 justify-end'>
 							<a
-								href='#'
-								className='text-sm font-semibold leading-6 text-gray-900'>
-								Subject
+								href='https://xmltwo.ibo.org/publications/DP/Group4/d_4_biolo_gui_2302_1/dp_biology_IA_criteria_en.pdf'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='text-sm font-semibold leading-6 text-gray-900 hover:font-bold'>
+								IA Criteria
 							</a>
 						</div>
 					</div>

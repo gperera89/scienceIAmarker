@@ -17,10 +17,10 @@ const initialState = {
 	EvC: "",
 	name: "",
 	selectedItem: "item1",
-	RDFinal: null,
-	DAFinal: null,
-	CoFinal: null,
-	EvFinal: null,
+	RDFinal: 0,
+	DAFinal: 0,
+	CoFinal: 0,
+	EvFinal: 0,
 };
 
 export const scoreSlice = createSlice({
@@ -118,28 +118,16 @@ export const scoreSlice = createSlice({
 			};
 		},
 		updateRDFinal: (state, action) => {
-			return {
-				...state,
-				RDFinal: action.payload,
-			};
+			state.RDFinal = action.payload;
 		},
 		updateDAFinal: (state, action) => {
-			return {
-				...state,
-				DAFinal: action.payload,
-			};
+			state.DAFinal = action.payload;
 		},
 		updateCoFinal: (state, action) => {
-			return {
-				...state,
-				CoFinal: action.payload,
-			};
+			state.CoFinal = action.payload;
 		},
 		updateEvFinal: (state, action) => {
-			return {
-				...state,
-				EvFinal: action.payload,
-			};
+			state.EvFinal = action.payload;
 		},
 		updateSelecteditem: (state, action) => {
 			state.selectedItem = action.payload;

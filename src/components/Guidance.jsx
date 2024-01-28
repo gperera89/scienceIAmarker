@@ -19,23 +19,9 @@ function Guidance() {
 	} = useSelector((state) => state.score);
 	const guidance = useSelector((state) => state.guidance.guidance);
 
-	const mapValue = (value) => {
-		if (value === 1 || value === 2) {
-			return 1;
-		} else if (value === 3 || value === 4) {
-			return 2;
-		} else if (value === 5 || value === 6) {
-			return 3;
-		} else if (value === 0) {
-			return 0;
-		}
-		return null;
-	};
-
 	useEffect(() => {
 		if (RD1state !== null) {
-			const mappedValue = mapValue(RD1state);
-			const guidance = bioRubric["Research Question"][mappedValue];
+			const guidance = bioRubric["Research Question"][RD1state];
 			if (guidance !== undefined) {
 				dispatch(
 					updateLastUpdatedStateAndGuidance({
@@ -49,8 +35,7 @@ function Guidance() {
 
 	useEffect(() => {
 		if (RD2state !== null) {
-			const mappedValue = mapValue(RD2state);
-			const guidance = bioRubric["Method Validity"][mappedValue];
+			const guidance = bioRubric["Method Validity"][RD2state];
 			if (guidance !== undefined) {
 				dispatch(
 					updateLastUpdatedStateAndGuidance({
@@ -64,8 +49,7 @@ function Guidance() {
 
 	useEffect(() => {
 		if (RD3state !== null) {
-			const mappedValue = mapValue(RD3state);
-			const guidance = bioRubric["Method Reliability"][mappedValue];
+			const guidance = bioRubric["Method Reliability"][RD3state];
 			if (guidance !== undefined) {
 				dispatch(
 					updateLastUpdatedStateAndGuidance({
@@ -79,8 +63,7 @@ function Guidance() {
 
 	useEffect(() => {
 		if (DA1state !== null) {
-			const mappedValue = mapValue(DA1state);
-			const guidance = bioRubric["Clarity"][mappedValue];
+			const guidance = bioRubric["Clarity"][DA1state];
 			if (guidance !== undefined) {
 				dispatch(
 					updateLastUpdatedStateAndGuidance({
@@ -94,8 +77,7 @@ function Guidance() {
 
 	useEffect(() => {
 		if (DA2state !== null) {
-			const mappedValue = mapValue(DA2state);
-			const guidance = bioRubric["Uncertainty"][mappedValue];
+			const guidance = bioRubric["Uncertainty"][DA2state];
 			if (guidance !== undefined) {
 				dispatch(
 					updateLastUpdatedStateAndGuidance({
@@ -109,8 +91,7 @@ function Guidance() {
 
 	useEffect(() => {
 		if (DA3state !== null) {
-			const mappedValue = mapValue(DA3state);
-			const guidance = bioRubric["Processing"][mappedValue];
+			const guidance = bioRubric["Processing"][DA3state];
 			if (guidance !== undefined) {
 				dispatch(
 					updateLastUpdatedStateAndGuidance({
@@ -124,8 +105,7 @@ function Guidance() {
 
 	useEffect(() => {
 		if (Co1state !== null) {
-			const mappedValue = mapValue(Co1state);
-			const guidance = bioRubric["Justification"][mappedValue];
+			const guidance = bioRubric["Justification"][Co1state];
 			if (guidance !== undefined) {
 				dispatch(
 					updateLastUpdatedStateAndGuidance({
@@ -139,8 +119,7 @@ function Guidance() {
 
 	useEffect(() => {
 		if (Co2state !== null) {
-			const mappedValue = mapValue(Co2state);
-			const guidance = bioRubric["Scientific Context"][mappedValue];
+			const guidance = bioRubric["Scientific Context"][Co2state];
 			if (guidance !== undefined) {
 				dispatch(
 					updateLastUpdatedStateAndGuidance({
@@ -154,8 +133,7 @@ function Guidance() {
 
 	useEffect(() => {
 		if (Ev1state !== null) {
-			const mappedValue = mapValue(Ev1state);
-			const guidance = bioRubric["Limitations"][mappedValue];
+			const guidance = bioRubric["Limitations"][Ev1state];
 			if (guidance !== undefined) {
 				dispatch(
 					updateLastUpdatedStateAndGuidance({
@@ -169,8 +147,8 @@ function Guidance() {
 
 	useEffect(() => {
 		if (Ev2state !== null) {
-			const mappedValue = mapValue(Ev2state);
-			const guidance = bioRubric["Improvements"][mappedValue];
+			// const mappedValue = mapValue(Ev2state);
+			const guidance = bioRubric["Improvements"][Ev2state];
 			if (guidance !== undefined) {
 				dispatch(
 					updateLastUpdatedStateAndGuidance({

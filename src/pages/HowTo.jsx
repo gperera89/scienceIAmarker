@@ -21,11 +21,10 @@ export default function HowTo() {
 					<div className='relative' style={{ paddingBottom: "56.25%" }}>
 						<iframe
 							className='absolute inset-0 w-full h-full'
-							width='800'
-							height='480'
-							src='https://www.youtube.com/embed/Dj2Z0Ti6vFQ'
+							width='560'
+							height='315'
+							src='https://www.youtube.com/embed/mr15Xzb1Ook?si=IXzHOODRNWx1zUsL'
 							title='YouTube video player'
-							frameborder='0'
 							allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
 							allowfullscreen></iframe>
 					</div>

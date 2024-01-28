@@ -2,7 +2,7 @@ import Rubric from "./Rubrics";
 import Button from "./Button";
 import { useSelector, useDispatch } from "react-redux";
 import { updateSelecteditem } from "../app/scoreSlice";
-import { updateExportAsText, updateExportAsTable } from "../app/controlSlice";
+import { updateExportAsText } from "../app/controlSlice";
 
 const Tabs = () => {
 	const dispatch = useDispatch();
@@ -16,10 +16,6 @@ const Tabs = () => {
 		dispatch(updateExportAsText(true));
 	};
 
-	const handleExportAsTableClick = () => {
-		dispatch(updateExportAsTable(true));
-	};
-
 	return (
 		<>
 			<div className='tabs-container flex'>
@@ -27,36 +23,36 @@ const Tabs = () => {
 					<div
 						className={`item ${
 							selectedItem === "item1"
-								? "active text-blue-500 border-r border-blue-500 font-bold"
+								? "active  border-r-2 border-slate-900 font-bold"
 								: "text-black"
-						} p-3 hover:bg-gray-200 transition-colors duration-200 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
+						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 transition-all duration-100 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
 						onClick={() => handleItemClick("item1")}>
 						Research Design
 					</div>
 					<div
 						className={`item ${
 							selectedItem === "item2"
-								? "active text-blue-500 border-r border-blue-500 font-bold"
+								? "active  border-r-2 border-slate-900 font-bold"
 								: "text-black"
-						} p-3 hover:bg-gray-200 transition-colors duration-200 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
+						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 transition-all duration-100 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
 						onClick={() => handleItemClick("item2")}>
 						Data Analysis
 					</div>
 					<div
 						className={`item ${
 							selectedItem === "item3"
-								? "active text-blue-500 border-r border-blue-500 font-bold"
+								? "active  border-r-2 border-slate-900 font-bold"
 								: "text-black"
-						} p-3 hover:bg-gray-200 transition-colors duration-200 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
+						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 transition-all duration-100 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
 						onClick={() => handleItemClick("item3")}>
 						Conclusion
 					</div>
 					<div
 						className={`item ${
 							selectedItem === "item4"
-								? "active text-blue-500 border-r border-blue-500 font-bold"
+								? "active  border-r-2 border-slate-900 font-bold"
 								: "text-black"
-						} p-3 hover:bg-gray-200 transition-colors duration-200 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
+						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 transition-all duration-100 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
 						onClick={() => handleItemClick("item4")}>
 						Evaluation
 					</div>

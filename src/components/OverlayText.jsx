@@ -69,10 +69,12 @@ export default function Example() {
 								leaveFrom='translate-x-0'
 								leaveTo='translate-x-full'>
 								<Dialog.Panel className='pointer-events-auto w-screen max-w-md'>
-									<div className='flex h-full flex-col overflow-y-scroll bg-white shadow-xl'>
-										<div className='bg-indigo-700 px-4 py-6 sm:px-6'>
+									<div className='flex h-full flex-col overflow-y-scroll bg-white dark:bg-slate-950 shadow-xl'>
+										<div className='bg-[#0047AB] dark:bg-[#4682B4] px-4 py-6 sm:px-6'>
 											<div className='flex items-center justify-between'>
-												<Dialog.Title className='text-base font-semibold leading-6 text-white'>
+												<Dialog.Title
+													className='text-base font-semibold leading-6 text-white'
+													dark:text-slate-900>
 													{name === ""
 														? "Internal Assessment Results"
 														: `Internal Assessment Results of ${name}`}
@@ -80,7 +82,7 @@ export default function Example() {
 												<div className='ml-3 flex h-7 items-center'>
 													<button
 														type='button'
-														className='relative rounded-md bg-indigo-700 text-indigo-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white'
+														className='relative rounded-md bg-[#0047AB] dark:bg-[#4682B4] text-white dark:text-slate-900 hover:text-white dark:hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-white dark:focus:ring-slate-900'
 														onClick={() => {
 															handleClose();
 														}}>
@@ -103,9 +105,9 @@ export default function Example() {
 											</div>
 										</div>
 										<div className='relative flex-1 px-4 py-6 sm:px-6'>
-											<div className='copy-to-clipboard'>
+											<div className='copy-to-clipboard  text-slate-900 dark:text-white'>
 												<div className='mt-1'>
-													<p className='font-medium  text-slate-900'>
+													<p className='font-medium'>
 														Overall Score: {finalScore}
 													</p>
 													<p className='font-medium text-slate-900'>

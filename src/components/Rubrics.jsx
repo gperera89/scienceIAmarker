@@ -92,7 +92,7 @@ const Rubric = () => {
 						<div className='mt-16'>
 							<label
 								htmlFor='final-RD-input'
-								className='block text-sm font-medium text-gray-700'>
+								className='block text-sm font-medium text-slate-900 dark:text-white'>
 								Score
 							</label>
 							<input
@@ -106,7 +106,7 @@ const Rubric = () => {
 								onChange={(e) =>
 									dispatch(updateRDFinal(Number(e.target.value)))
 								}
-								className='border-2 border-gray-900 bg-white h-8 pl-3 rounded-xl text-sm focus:outline-none'
+								className='border-2 border-slate-900 dark:border-white bg-white dark:bg-slate-900 dark:text-white h-8 pl-3 rounded-xl text-sm focus:outline-none'
 							/>
 						</div>
 					</div>
@@ -149,7 +149,7 @@ const Rubric = () => {
 						<div className='mt-16'>
 							<label
 								htmlFor='final-DA-input'
-								className='block text-sm font-medium text-gray-700'>
+								className='block text-sm font-medium  text-slate-900 dark:text-white'>
 								Score
 							</label>
 							<input
@@ -163,7 +163,7 @@ const Rubric = () => {
 								onChange={(e) =>
 									dispatch(updateDAFinal(Number(e.target.value)))
 								}
-								className='border-2 border-gray-900 bg-white h-8 pl-3 rounded-xl text-sm focus:outline-none'
+								className='border-2 border-slate-900 dark:border-white bg-white dark:bg-slate-900 dark:text-white h-8 pl-3 rounded-xl text-sm focus:outline-none'
 							/>
 						</div>
 					</div>
@@ -198,7 +198,7 @@ const Rubric = () => {
 						<div className='mt-16'>
 							<label
 								htmlFor='final-Co-input'
-								className='block text-sm font-medium text-gray-700'>
+								className='block text-sm font-medium text-slate-900 dark:text-white'>
 								Score
 							</label>
 							<input
@@ -212,7 +212,7 @@ const Rubric = () => {
 								onChange={(e) =>
 									dispatch(updateCoFinal(Number(e.target.value)))
 								}
-								className='border-2 border-gray-900 bg-white h-8 pl-3 rounded-xl text-sm focus:outline-none'
+								className='border-2 border-slate-900 dark:border-white bg-white dark:bg-slate-900 dark:text-white h-8 pl-3 rounded-xl text-sm focus:outline-none'
 							/>
 						</div>
 					</div>
@@ -246,7 +246,7 @@ const Rubric = () => {
 						<div className='mt-16'>
 							<label
 								htmlFor='final-Ev-input'
-								className='block text-sm font-medium text-gray-700'>
+								className='block text-sm font-medium  text-slate-900 dark:text-white'>
 								Score
 							</label>
 							<input
@@ -260,7 +260,7 @@ const Rubric = () => {
 								onChange={(e) =>
 									dispatch(updateEvFinal(Number(e.target.value)))
 								}
-								className='border-2 border-gray-900 bg-white h-8 pl-3 rounded-xl text-sm focus:outline-none'
+								className='border-2 border-slate-900 dark:border-white bg-white dark:bg-slate-900 dark:text-white h-8 pl-3 rounded-xl text-sm focus:outline-none'
 							/>
 						</div>
 					</div>

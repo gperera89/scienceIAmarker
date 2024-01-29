@@ -162,7 +162,7 @@ function Guidance() {
 
 	return (
 		<>
-			<div className='flex items-center justify-center'>
+			<div className='flex items-center justify-center text-slate-900 dark:text-white'>
 				<p>{guidance}</p>
 			</div>
 		</>

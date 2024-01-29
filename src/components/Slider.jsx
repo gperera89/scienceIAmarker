@@ -17,7 +17,7 @@ function Slider({ value, title, updateAction, id }) {
 	};
 	return (
 		<div className='flex items-start space-x-4'>
-			<div className='flex flex-col items-start'>
+			<div className='flex flex-col items-start dark:text-white'>
 				<label htmlFor='slider' className='mb-2'>
 					{title}
 				</label>
@@ -29,7 +29,7 @@ function Slider({ value, title, updateAction, id }) {
 					step='1'
 					value={Number(value) || 0}
 					onChange={handleChange}
-					className='slider-thumb bg-slate-500 appearance-none h-1 rounded-full w-80'
+					className='slider-thumb bg-slate-900 dark:bg-slate-500 appearance-none h-1 rounded-full w-80 '
 				/>
 			</div>
 			<div className='flex flex-col items-start my-4'>
@@ -41,7 +41,7 @@ function Slider({ value, title, updateAction, id }) {
 					step='1'
 					value={value}
 					onChange={handleChange}
-					className='border-2 border-gray-900 bg-white h-8 pl-3 rounded-xl text-sm focus:outline-none'
+					className='border-2 border-slate-500 bg-white dark:bg-slate-900 dark:text-white h-8 pl-3 rounded-xl text-sm focus:outline-none'
 				/>
 			</div>
 		</div>
@@ -52,6 +52,7 @@ Slider.propTypes = {
 	value: PropTypes.number.isRequired,
 	updateAction: PropTypes.func.isRequired,
 	title: PropTypes.string.isRequired,
+	id: PropTypes.string.isRequired,
 };
 
 export default Slider;

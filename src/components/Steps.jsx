@@ -23,36 +23,36 @@ const Tabs = () => {
 					<div
 						className={`item ${
 							selectedItem === "item1"
-								? "active  border-r-2 border-slate-900 font-bold"
-								: "text-black"
-						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 transition-all duration-100 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
+								? "active  border-r-2 border-slate-900 font-bold dark:text-white"
+								: "text-slate-900 dark:text-white"
+						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 dark:border-white transition-all duration-100 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
 						onClick={() => handleItemClick("item1")}>
 						Research Design
 					</div>
 					<div
 						className={`item ${
 							selectedItem === "item2"
-								? "active  border-r-2 border-slate-900 font-bold"
-								: "text-black"
-						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 transition-all duration-100 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
+								? "active  border-r-2 border-slate-900 font-bold dark:text-white"
+								: "text-slate-900 dark:text-white"
+						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 dark:border-white transition-all duration-100 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
 						onClick={() => handleItemClick("item2")}>
 						Data Analysis
 					</div>
 					<div
 						className={`item ${
 							selectedItem === "item3"
-								? "active  border-r-2 border-slate-900 font-bold"
-								: "text-black"
-						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 transition-all duration-100 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
+								? "active  border-r-2 border-slate-900 font-bold dark:text-white"
+								: "text-slate-900 dark:text-white"
+						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 dark:border-white transition-all duration-100 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
 						onClick={() => handleItemClick("item3")}>
 						Conclusion
 					</div>
 					<div
 						className={`item ${
 							selectedItem === "item4"
-								? "active  border-r-2 border-slate-900 font-bold"
-								: "text-black"
-						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 transition-all duration-100 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
+								? "active  border-r-2 border-slate-900 font-bold dark:text-white"
+								: "text-slate-900 dark:text-white"
+						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 dark:border-white transition-all duration-100 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
 						onClick={() => handleItemClick("item4")}>
 						Evaluation
 					</div>

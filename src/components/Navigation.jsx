@@ -23,7 +23,7 @@ export default function Example() {
 							<Link
 								key={item.name}
 								to={item.href}
-								className='text-sm font-semibold leading-6 text-gray-900 hover:font-bold'>
+								className='text-sm font-semibold leading-6 text-gray-900 dark:text-white hover:font-bold'>
 								{item.name}
 							</Link>
 						))}
@@ -31,7 +31,7 @@ export default function Example() {
 					<div className='flex lg:hidden'>
 						<button
 							type='button'
-							className='-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700'
+							className='-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-slate-900 dark:text-white'
 							onClick={() => setMobileMenuOpen(true)}>
 							<span className='sr-only'>Open main menu</span>
 							<Bars3Icon className='h-6 w-6' aria-hidden='true ' />
@@ -51,7 +51,7 @@ export default function Example() {
 						href='https://xmltwo.ibo.org/publications/DP/Group4/d_4_biolo_gui_2302_1/dp_biology_IA_criteria_en.pdf'
 						target='_blank'
 						rel='noopener noreferrer'
-						className='text-sm font-semibold leading-6 text-gray-900 hover:font-bold'>
+						className='text-sm font-semibold leading-6 text-slate-900 dark:text-white hover:font-bold'>
 						IA Criteria
 					</a>
 				</div>
@@ -96,7 +96,7 @@ export default function Example() {
 							<a
 								key={item.name}
 								href={item.href}
-								className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:font-bold dark:text-gray-200 hover:slate-900 '>
+								className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-900 hover:font-bold dark:text-white hover:slate-900 '>
 								{item.name}
 							</a>
 						))}

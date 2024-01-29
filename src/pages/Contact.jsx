@@ -14,7 +14,7 @@ export default function Contact() {
 					<p className='mt-6 text-lg leading-8 text-slate-900'>
 						If you have any questions, suggestions, or would just like to
 						connect, please reach out to me via email or through my social
-						media. I'd love to hear from you!
+						media. I&apos;d love to hear from you!
 					</p>
 					<p className='mt-6 text-lg leading-8 text-slate-900'>GP</p>
 				</div>

@@ -13,7 +13,7 @@ export default function Example() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	return (
-		<header className='bg-white'>
+		<header className='bg-white dark:bg-slate-900'>
 			<nav
 				className='mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8'
 				aria-label='Global'>
@@ -62,7 +62,7 @@ export default function Example() {
 				open={mobileMenuOpen}
 				onClose={setMobileMenuOpen}>
 				<div className='fixed inset-0 z-10' />
-				<Dialog.Panel className='fixed inset-y-0 left-0 z-10 w-full overflow-y-auto bg-white px-6 py-6'>
+				<Dialog.Panel className='fixed inset-y-0 left-0 z-10 w-full overflow-y-auto bg-white dark:bg-slate-900 px-6 py-6'>
 					<div className='flex items-center justify-between'>
 						<div className='flex flex-1'>
 							<button
@@ -96,7 +96,7 @@ export default function Example() {
 							<a
 								key={item.name}
 								href={item.href}
-								className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'>
+								className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:font-bold dark:text-gray-200 hover:slate-900 '>
 								{item.name}
 							</a>
 						))}

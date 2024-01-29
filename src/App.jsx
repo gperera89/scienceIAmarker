@@ -4,10 +4,26 @@ import Steps from "./components/Steps";
 import NameField from "./components/NameField";
 import Guidance from "./components/Guidance";
 import OverlayText from "./components/OverlayText";
+import DarkModeSwitch from "./components/DarkModeSwitch";
+import { useState, useEffect } from "react";
 
 function App() {
+	const [isDarkMode, setIsDarkMode] = useState(false);
+
+	useEffect(() => {
+		if (isDarkMode) {
+			document.body.classList.add("dark");
+		} else {
+			document.body.classList.remove("dark");
+		}
+	}, [isDarkMode]);
+
 	return (
-		<>
+		<div>
+			<DarkModeSwitch
+				enableDark={isDarkMode}
+				onToggle={() => setIsDarkMode((prevMode) => !prevMode)}
+			/>
 			<div>
 				<Navigation />
 			</div>
@@ -23,7 +39,7 @@ function App() {
 				</div>
 			</div>
 			<OverlayText />
-		</>
+		</div>
 	);
 }
 

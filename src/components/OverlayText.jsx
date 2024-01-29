@@ -1,12 +1,14 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useSelector, useDispatch } from "react-redux";
 import { updateExportAsText } from "../app/controlSlice";
 import Toggle from "./Toggle";
 import { bioRubric } from "./bioRubric";
+import Button from "./Button";
 
 export default function Example() {
+	const [buttonName, setButtonName] = useState("Copy to clipboard");
 	const exportAsText = useSelector((state) => state.control.exportAsText);
 	const criteriaToggle = useSelector((state) => state.control.criteriaToggle);
 	const dispatch = useDispatch();
@@ -37,6 +39,20 @@ export default function Example() {
 	} = useSelector((state) => state.score);
 
 	const finalScore = RDFinal + DAFinal + CoFinal + EvFinal;
+
+	function copyToClipboard() {
+		const textToCopy = document.querySelector(".copy-to-clipboard").innerText;
+		navigator.clipboard.writeText(textToCopy).then(
+			function () {
+				console.log("Copying to clipboard was successful!");
+				setButtonName("Copied!");
+				setTimeout(() => setButtonName("Copy to clipboard"), 5000); // Reset after 5 seconds
+			},
+			function (err) {
+				console.error("Could not copy text: ", err);
+			}
+		);
+	}
 	return (
 		<Transition.Root show={exportAsText} as={Fragment}>
 			<Dialog as='div' className='relative z-10' onClose={handleClose}>
@@ -75,21 +91,27 @@ export default function Example() {
 												</div>
 											</div>
 											<div className='flex justify-between'>
-												<div className='mt-1'>
-													<p className='font-medium  text-slate-100'>
-														Overall Score: {finalScore}
-													</p>
-													<p className='font-medium text-slate-100'>
-														Overall Grade:{" "}
-													</p>
-												</div>
 												<div className='mt-5'>
 													<Toggle />
+												</div>
+												<div className='mt-4 mr-10'>
+													<Button
+														onClick={copyToClipboard}
+														buttonName={buttonName}
+													/>
 												</div>
 											</div>
 										</div>
 										<div className='relative flex-1 px-4 py-6 sm:px-6'>
-											<div>
+											<div className='copy-to-clipboard'>
+												<div className='mt-1'>
+													<p className='font-medium  text-slate-900'>
+														Overall Score: {finalScore}
+													</p>
+													<p className='font-medium text-slate-900'>
+														Overall Grade:{" "}
+													</p>
+												</div>
 												<p className='font-semibold'>
 													Score for Research Design: {RDFinal}
 												</p>

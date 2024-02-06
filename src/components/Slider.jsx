@@ -18,11 +18,11 @@ function Slider({ value, title, updateAction, id }) {
 	return (
 		<div className='flex items-start space-x-4'>
 			<div className='flex flex-col items-start dark:text-white'>
-				<label htmlFor='slider' className='mb-2'>
+				<label htmlFor={`slider-${id}`} className='mb-2'>
 					{title}
 				</label>
 				<input
-					id={id}
+					id={`slider-${id}`}
 					type='range'
 					min='0'
 					max='6'
@@ -34,7 +34,7 @@ function Slider({ value, title, updateAction, id }) {
 			</div>
 			<div className='flex flex-col items-start my-4'>
 				<input
-					id='slider-input'
+					id={`${id}-input`}
 					type='number'
 					min='0'
 					max='6'

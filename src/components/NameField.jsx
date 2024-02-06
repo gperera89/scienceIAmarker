@@ -21,6 +21,7 @@ function NameField() {
 				type='text'
 				value={name}
 				id='name'
+				autoComplete='off'
 				placeholder='Name / Candidate Number'
 				className='block w-full border-0 p-0 text-slate-900 dark:text-white placeholder:text-slate-500 dark:bg-slate-900 focus:ring-0 sm:text-sm sm:leading-6 text-center'
 				onChange={handleNameChange}

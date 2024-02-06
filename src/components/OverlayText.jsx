@@ -7,7 +7,7 @@ import Toggle from "./Toggle";
 import { bioRubric } from "./bioRubric";
 import Button from "./Button";
 
-export default function Example() {
+export default function Overlay() {
 	const [buttonName, setButtonName] = useState("Copy to clipboard");
 	const exportAsText = useSelector((state) => state.control.exportAsText);
 	const criteriaToggle = useSelector((state) => state.control.criteriaToggle);
@@ -40,11 +40,16 @@ export default function Example() {
 
 	const finalScore = RDFinal + DAFinal + CoFinal + EvFinal;
 
+	const gradeLookup = [
+		1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7,
+	];
+
+	let finalGrade = gradeLookup[finalScore];
+
 	function copyToClipboard() {
 		const textToCopy = document.querySelector(".copy-to-clipboard").innerText;
 		navigator.clipboard.writeText(textToCopy).then(
 			function () {
-				console.log("Copying to clipboard was successful!");
 				setButtonName("Copied!");
 				setTimeout(() => setButtonName("Copy to clipboard"), 5000); // Reset after 5 seconds
 			},
@@ -72,9 +77,7 @@ export default function Example() {
 									<div className='flex h-full flex-col overflow-y-scroll bg-white dark:bg-slate-950 shadow-xl'>
 										<div className='bg-[#0047AB] dark:bg-[#4682B4] px-4 py-6 sm:px-6'>
 											<div className='flex items-center justify-between'>
-												<Dialog.Title
-													className='text-base font-semibold leading-6 text-white'
-													dark:text-slate-900>
+												<Dialog.Title className='text-base font-semibold leading-6 text-white'>
 													{name === ""
 														? "Internal Assessment Results"
 														: `Internal Assessment Results of ${name}`}
@@ -82,7 +85,7 @@ export default function Example() {
 												<div className='ml-3 flex h-7 items-center'>
 													<button
 														type='button'
-														className='relative rounded-md bg-[#0047AB] dark:bg-[#4682B4] text-white dark:text-slate-900 hover:text-white dark:hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-white dark:focus:ring-slate-900'
+														className='relative rounded-md bg-[#0047AB] dark:bg-[#4682B4] text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white'
 														onClick={() => {
 															handleClose();
 														}}>
@@ -105,14 +108,16 @@ export default function Example() {
 											</div>
 										</div>
 										<div className='relative flex-1 px-4 py-6 sm:px-6'>
-											<div className='copy-to-clipboard  text-slate-900 dark:text-white'>
+											<div className='copy-to-clipboard text-slate-900 dark:text-white'>
+												{" "}
 												<div className='mt-1'>
-													<p className='font-medium'>
+													<p className='font-semibold'>
 														Overall Score: {finalScore}
 													</p>
-													<p className='font-medium text-slate-900'>
-														Overall Grade:{" "}
+													<p className='font-semibold'>
+														Overall Grade: {finalGrade}
 													</p>
+													<br />
 												</div>
 												<p className='font-semibold'>
 													Score for Research Design: {RDFinal}

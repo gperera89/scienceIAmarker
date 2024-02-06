@@ -5,6 +5,7 @@ import NameField from "./components/NameField";
 import Guidance from "./components/Guidance";
 import OverlayText from "./components/OverlayText";
 import { useState, useEffect } from "react";
+import OverlayTable from "./components/OverlayTable";
 
 function App() {
 	const [isDarkMode, setIsDarkMode] = useState(false);
@@ -42,6 +43,7 @@ function App() {
 				</div>
 			</div>
 			<OverlayText />
+			<OverlayTable />
 		</div>
 	);
 }

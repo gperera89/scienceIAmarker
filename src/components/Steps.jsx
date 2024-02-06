@@ -2,7 +2,7 @@ import Rubric from "./Rubrics";
 import Button from "./Button";
 import { useSelector, useDispatch } from "react-redux";
 import { updateSelecteditem } from "../app/scoreSlice";
-import { updateExportAsText } from "../app/controlSlice";
+import { updateExportAsText, updateExportAsTable } from "../app/controlSlice";
 
 const Tabs = () => {
 	const dispatch = useDispatch();
@@ -14,6 +14,9 @@ const Tabs = () => {
 
 	const handleExportAsTextClick = () => {
 		dispatch(updateExportAsText(true));
+	};
+	const handleExportAsTableClick = () => {
+		dispatch(updateExportAsTable(true));
 	};
 
 	return (
@@ -60,6 +63,12 @@ const Tabs = () => {
 						<Button
 							buttonName='View Results'
 							onClick={handleExportAsTextClick}
+						/>
+					</div>
+					<div>
+						<Button
+							buttonName='View Table'
+							onClick={handleExportAsTableClick}
 						/>
 					</div>
 				</div>

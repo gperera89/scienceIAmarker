@@ -29,14 +29,14 @@ export default function Contact() {
 						rel='noopener noreferrer'>
 						<img
 							className='w-10 h-10 transform transition duration-500 ease-in-out hover:scale-110'
-							src='src/assets/LinkedIn.png'
+							src='/LinkedIn.png'
 							alt='LinkedIn'
 						/>
 					</a>
 					<a href='mailto:g.perera26@gmail.com'>
 						<img
 							className='w-10 h-10 transform transition duration-500 ease-in-out hover:scale-110'
-							src='src/assets/Gmail.png'
+							src='/Gmail.png'
 							alt='Gmail'
 						/>
 					</a>
@@ -46,7 +46,7 @@ export default function Contact() {
 						rel='noopener noreferrer'>
 						<img
 							className='w-10 h-10 transform transition duration-500 ease-in-out hover:scale-110 dark:bg-white'
-							src='src/assets/Github.png '
+							src='/Github.png '
 							alt='GitHub'
 						/>
 					</a>
@@ -56,7 +56,7 @@ export default function Contact() {
 						rel='noopener noreferrer'>
 						<img
 							className='w-10 h-10 transform transition duration-500 ease-in-out hover:scale-110'
-							src='src/assets/Instagram.png'
+							src='/Instagram.png'
 							alt='Instagram'
 						/>
 					</a>

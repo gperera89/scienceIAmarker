@@ -42,7 +42,7 @@ export default function Example() {
 					<span className='sr-only'>Science IA Marker</span>
 					<img
 						className='h-10 w-auto'
-						src='/logo192.png'
+						src='/logo192.webp'
 						alt='Science IA Marker Logo'
 					/>
 				</a>

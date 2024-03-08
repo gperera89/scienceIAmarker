@@ -33,6 +33,9 @@ function Slider({ value, title, updateAction, id }) {
 				/>
 			</div>
 			<div className='flex flex-col items-start my-4'>
+				<label htmlFor={`${id}-input`} className='sr-only'>
+					Input for slider
+				</label>
 				<input
 					id={`${id}-input`}
 					type='number'

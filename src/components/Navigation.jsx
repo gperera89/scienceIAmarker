@@ -34,14 +34,18 @@ export default function Example() {
 							className='-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-slate-900 dark:text-white'
 							onClick={() => setMobileMenuOpen(true)}>
 							<span className='sr-only'>Open main menu</span>
-							<Bars3Icon className='h-6 w-6' aria-hidden='true ' />
+							<Bars3Icon
+								className='h-6 w-6'
+								aria-hidden='false'
+								aria-label='Menu'
+							/>{" "}
 						</button>
 					</div>
 				</div>
 				<a href='/' className='-m-1.5 p-1.5'>
 					<span className='sr-only'>Science IA Marker</span>
 					<img
-						className='h-10 w-auto'
+						className='h-10 w-10'
 						src='/logo192.webp'
 						alt='Science IA Marker Logo'
 					/>

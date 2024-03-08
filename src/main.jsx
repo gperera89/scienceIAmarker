@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./index.css";
 import Contact from "./pages/Contact.jsx";
 import HowTo from "./pages/HowTo.jsx";
+import FourOhFour from "./pages/FourOhFour.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 					<Route path='/' element={<App />} />
 					<Route path='/contact' element={<Contact />} />
 					<Route path='/how-to' element={<HowTo />} />
+					<Route path='*' element={<FourOhFour />} />
 				</Routes>
 			</Router>
 		</Provider>

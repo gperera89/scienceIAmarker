@@ -1,15 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
 
-export default {
+module.exports = {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+				sans: ['"Inter var"', ...defaultTheme.fontFamily.sans],
 			},
+			typography: (theme) => ({
+				DEFAULT: {
+					css: {
+						"@font-face": [
+							{
+								fontFamily: "Inter var",
+								fontWeight: "normal",
+								fontStyle: "normal",
+								fontDisplay: "swap",
+								src: "url('/inter.tff') format('tff')",
+							},
+						],
+					},
+				},
+			}),
 		},
 	},
-	plugins: [require("@tailwindcss/forms")],
+	plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
 	darkMode: "media",
 };

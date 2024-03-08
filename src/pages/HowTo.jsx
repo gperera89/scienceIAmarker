@@ -23,7 +23,7 @@ export default function HowTo() {
 							className='absolute inset-0 w-full h-full'
 							width='560'
 							height='315'
-							src='https://www.youtube.com/embed/mr15Xzb1Ook?si=IXzHOODRNWx1zUsL'
+							src='https://youtu.be/TW34BBfGs_U'
 							title='YouTube video player'
 							allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
 							allowfullscreen></iframe>

@@ -8,25 +8,24 @@ export default function HowTo() {
 			</div>
 			<div className='px-6 py-24 sm:py-32 lg:px-8'>
 				<div className='mx-auto max-w-2xl text-center'>
-					<h2 className='text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl'>
+					<h2 className='text-4xl font-bold tracking-tight  dark:text-white text-slate-900 sm:text-6xl'>
 						How To Use
 					</h2>
-					<h2 className='text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl'>
+					<h2 className='text-4xl font-bold tracking-tight dark:text-white text-slate-900 sm:text-6xl'>
 						Science IA Marker
 					</h2>
-					<p className='mt-6 text-lg leading-8 text-slate-900'>
+					<p className='mt-6 text-lg leading-8 dark:text-white text-slate-900'>
 						Science IA Marker is a tool to streamline the process of marking and
 						giving feedback on IAs.
 					</p>
-					<div className='relative' style={{ paddingBottom: "56.25%" }}>
+					<div className='flex items-center justify-center mt-5'>
 						<iframe
-							className='absolute inset-0 w-full h-full'
 							width='560'
 							height='315'
-							src='https://youtu.be/TW34BBfGs_U'
+							src='https://www.youtube.com/embed/TW34BBfGs_U?si=-5nVrDL_A9DoQ00j'
 							title='YouTube video player'
-							allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-							allowfullscreen></iframe>
+							allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+							allowFullScreen></iframe>
 					</div>
 				</div>
 			</div>

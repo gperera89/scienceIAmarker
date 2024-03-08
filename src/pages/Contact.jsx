@@ -8,15 +8,17 @@ export default function Contact() {
 			</div>
 			<div className='px-6 py-24 sm:py-32 lg:px-8'>
 				<div className='mx-auto max-w-2xl text-center'>
-					<h2 className='text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl'>
+					<h2 className='text-4xl font-bold tracking-tight text-slate-900  dark:text-white sm:text-6xl'>
 						Contact
 					</h2>
-					<p className='mt-6 text-lg leading-8 text-slate-900'>
+					<p className='mt-6 text-lg leading-8 text-slate-900  dark:text-white'>
 						If you have any questions, suggestions, or would just like to
 						connect, please reach out to me via email or through my social
 						media. I&apos;d love to hear from you!
 					</p>
-					<p className='mt-6 text-lg leading-8 text-slate-900'>GP</p>
+					<p className='mt-6 text-lg leading-8 text-slate-900  dark:text-white'>
+						GP
+					</p>
 				</div>
 			</div>
 			<div>
@@ -43,7 +45,7 @@ export default function Contact() {
 						target='_blank'
 						rel='noopener noreferrer'>
 						<img
-							className='w-10 h-10 transform transition duration-500 ease-in-out hover:scale-110'
+							className='w-10 h-10 transform transition duration-500 ease-in-out hover:scale-110 dark:bg-white'
 							src='src/assets/Github.png '
 							alt='GitHub'
 						/>

@@ -98,12 +98,12 @@ export default function Example() {
 					</div>
 					<div className='mt-6 space-y-2'>
 						{navigation.map((item) => (
-							<a
+							<Link
 								key={item.name}
-								href={item.href}
+								to={item.href}
 								className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-900 hover:font-bold dark:text-white hover:slate-900 '>
 								{item.name}
-							</a>
+							</Link>
 						))}
 					</div>
 				</Dialog.Panel>

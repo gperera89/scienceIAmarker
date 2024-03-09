@@ -7,6 +7,7 @@ const navigation = [
 	{ name: "App", href: "/" },
 	{ name: "How to Use", href: "/how-to" },
 	{ name: "Contact", href: "/contact" },
+	{ name: "LE2024", href: "https://scienceiamarker.netlify.app/" },
 ];
 
 export default function Example() {

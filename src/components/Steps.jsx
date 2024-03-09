@@ -28,7 +28,7 @@ const Tabs = () => {
 							selectedItem === "item1"
 								? "active  border-r-2 border-slate-900 font-bold dark:text-white"
 								: "text-slate-900 dark:text-white"
-						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 dark:border-white transition-all duration-100 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
+						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 dark:border-white transition-all duration-100 text-center cursor-pointer w-24 sm:w-40 rounded-tl-md rounded-bl-md`}
 						onClick={() => handleItemClick("item1")}>
 						<span className='sm:hidden'>RD</span>
 						<span className='hidden sm:inline'>Research Design</span>
@@ -38,7 +38,7 @@ const Tabs = () => {
 							selectedItem === "item2"
 								? "active  border-r-2 border-slate-900 font-bold dark:text-white"
 								: "text-slate-900 dark:text-white"
-						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 dark:border-white transition-all duration-100 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
+						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 dark:border-white transition-all duration-100 text-center cursor-pointer w-24 sm:w-40 rounded-tl-md rounded-bl-md`}
 						onClick={() => handleItemClick("item2")}>
 						<span className='sm:hidden'>DA</span>
 						<span className='hidden sm:inline'>Data Analysis</span>
@@ -48,7 +48,7 @@ const Tabs = () => {
 							selectedItem === "item3"
 								? "active  border-r-2 border-slate-900 font-bold dark:text-white"
 								: "text-slate-900 dark:text-white"
-						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 dark:border-white transition-all duration-100 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
+						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 dark:border-white transition-all duration-100 text-center cursor-pointer w-24 sm:w-40 rounded-tl-md rounded-bl-md`}
 						onClick={() => handleItemClick("item3")}>
 						<span className='sm:hidden'>Co</span>
 						<span className='hidden sm:inline'>Conclusion</span>
@@ -58,7 +58,7 @@ const Tabs = () => {
 							selectedItem === "item4"
 								? "active  border-r-2 border-slate-900 font-bold dark:text-white"
 								: "text-slate-900 dark:text-white"
-						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 dark:border-white transition-all duration-100 text-center cursor-pointer w-40 rounded-tl-md rounded-bl-md`}
+						} p-3 hover:font-bold hover:border-r-2 hover: border-slate-900 dark:border-white transition-all duration-100 text-center cursor-pointer w-24 sm:w-40 rounded-tl-md rounded-bl-md`}
 						onClick={() => handleItemClick("item4")}>
 						<span className='sm:hidden'>Ev</span>
 						<span className='hidden sm:inline'>Evaluation</span>

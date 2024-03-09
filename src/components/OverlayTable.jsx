@@ -87,7 +87,7 @@ export default function OverlayTable() {
 														? "Internal Assessment Results"
 														: `Internal Assessment Results of ${name}`}
 												</Dialog.Title>
-												<div className='ml-3 flex h-7 items-center'>
+												<div className='flex h-7 items-center'>
 													<button
 														type='button'
 														className='relative rounded-md bg-[#0047AB] dark:bg-[#4682B4] text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white'

@@ -14,7 +14,7 @@ function NameField() {
 				<label
 					htmlFor='name'
 					className={`absolute -top-2 left-2 inline-block bg-white dark:bg-slate-900 px-1 text-xs font-medium text-gray-500`}>
-					Name / Candidate Number
+					Name
 				</label>
 			)}
 			<input

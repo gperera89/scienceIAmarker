@@ -29,7 +29,7 @@ function Slider({ value, title, updateAction, id }) {
 					step='1'
 					value={Number(value) || 0}
 					onChange={handleChange}
-					className='slider-thumb bg-slate-900 dark:bg-slate-500 appearance-none h-1 rounded-full w-80 '
+					className='slider-thumb bg-slate-900 dark:bg-slate-500 appearance-none h-1 rounded-full sm:w-64 md:w-80'
 				/>
 			</div>
 			<div className='flex flex-col items-start my-4'>

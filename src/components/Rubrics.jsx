@@ -54,24 +54,54 @@ const Rubric = () => {
 			{/* Item 1 rubsics which is the Research Design Section */}
 			{selectedItem === "item1" && (
 				<div>
-					<Slider
-						title='Research Question Context'
-						value={RD1state}
-						updateAction={(newValue) => dispatch(updateRD1(newValue))}
-						id={"research-question-slider"}
-					/>
-					<Slider
-						title='Methodological Considerations'
-						value={RD2state}
-						updateAction={(newValue) => dispatch(updateRD2(newValue))}
-						id={"method-validity-slider"}
-					/>
-					<Slider
-						title='Description of Methodology'
-						value={RD3state}
-						updateAction={(newValue) => dispatch(updateRD3(newValue))}
-						id={"method-reliability-slider"}
-					/>
+					<div className='sm:hidden'>
+						<Slider
+							title='RQ Context'
+							value={RD1state}
+							updateAction={(newValue) => dispatch(updateRD1(newValue))}
+							id={"research-question-slider"}
+						/>
+					</div>
+					<div className='hidden sm:block'>
+						<Slider
+							title='Research Question Context'
+							value={RD1state}
+							updateAction={(newValue) => dispatch(updateRD1(newValue))}
+							id={"research-question-slider"}
+						/>
+					</div>
+					<div className='sm:hidden'>
+						<Slider
+							title='Method Plan'
+							value={RD2state}
+							updateAction={(newValue) => dispatch(updateRD2(newValue))}
+							id={"method-validity-slider"}
+						/>
+					</div>
+					<div className='hidden sm:block'>
+						<Slider
+							title='Methodological Considerations'
+							value={RD2state}
+							updateAction={(newValue) => dispatch(updateRD2(newValue))}
+							id={"method-validity-slider"}
+						/>
+					</div>
+					<div className='sm:hidden'>
+						<Slider
+							title='Method'
+							value={RD3state}
+							updateAction={(newValue) => dispatch(updateRD3(newValue))}
+							id={"method-reliability-slider"}
+						/>
+					</div>
+					<div className='hidden sm:block'>
+						<Slider
+							title='Description of Methodology'
+							value={RD3state}
+							updateAction={(newValue) => dispatch(updateRD3(newValue))}
+							id={"method-reliability-slider"}
+						/>
+					</div>
 					<div className='flex justify-between'>
 						<div className='flex-grow mr-8'>
 							<Textarea
@@ -106,24 +136,56 @@ const Rubric = () => {
 			{/* Item 2 rubsics which is the Data Analysis Section */}
 			{selectedItem === "item2" && (
 				<div>
-					<Slider
-						title='Clarity and Precision'
-						value={DA1state}
-						updateAction={(newValue) => dispatch(updateDA1(newValue))}
-						id={"clarity-slider"}
-					/>
-					<Slider
-						title='Consideration of Uncertainty'
-						value={DA2state}
-						updateAction={(newValue) => dispatch(updateDA2(newValue))}
-						id={"uncertainty-slider"}
-					/>
-					<Slider
-						title='Data Processing'
-						value={DA3state}
-						updateAction={(newValue) => dispatch(updateDA3(newValue))}
-						id={"processing-slider"}
-					/>
+					<div className='sm:hidden'>
+						<Slider
+							title='Clarity'
+							value={DA1state}
+							updateAction={(newValue) => dispatch(updateDA1(newValue))}
+							id={"clarity-slider"}
+						/>
+					</div>
+					<div className='hidden sm:block'>
+						<Slider
+							title='Clarity and Precision'
+							value={DA1state}
+							updateAction={(newValue) => dispatch(updateDA1(newValue))}
+							id={"clarity-slider"}
+						/>
+					</div>
+
+					<div className='sm:hidden'>
+						<Slider
+							title='Uncertainty'
+							value={DA2state}
+							updateAction={(newValue) => dispatch(updateDA2(newValue))}
+							id={"uncertainty-slider"}
+						/>
+					</div>
+					<div className='hidden sm:block'>
+						<Slider
+							title='Consideration of Uncertainty'
+							value={DA2state}
+							updateAction={(newValue) => dispatch(updateDA2(newValue))}
+							id={"uncertainty-slider"}
+						/>
+					</div>
+
+					<div className='sm:hidden'>
+						<Slider
+							title='Processing'
+							value={DA3state}
+							updateAction={(newValue) => dispatch(updateDA3(newValue))}
+							id={"processing-slider"}
+						/>
+					</div>
+					<div className='hidden sm:block'>
+						<Slider
+							title='Data Processing'
+							value={DA3state}
+							updateAction={(newValue) => dispatch(updateDA3(newValue))}
+							id={"processing-slider"}
+						/>
+					</div>
 					<div className='flex justify-between'>
 						<div className='flex-grow mr-8'>
 							<Textarea
@@ -164,12 +226,22 @@ const Rubric = () => {
 						updateAction={(newValue) => dispatch(updateCo1(newValue))}
 						id={"justification-slider"}
 					/>
-					<Slider
-						title='Scientific Context'
-						value={Co2state}
-						updateAction={(newValue) => dispatch(updateCo2(newValue))}
-						id={"scientific-context-slider"}
-					/>
+					<div className='sm:hidden'>
+						<Slider
+							title='Context'
+							value={Co2state}
+							updateAction={(newValue) => dispatch(updateCo2(newValue))}
+							id={"scientific-context-slider"}
+						/>
+					</div>
+					<div className='hidden sm:block'>
+						<Slider
+							title='Scientific Context'
+							value={Co2state}
+							updateAction={(newValue) => dispatch(updateCo2(newValue))}
+							id={"scientific-context-slider"}
+						/>
+					</div>
 					<div className='flex justify-between mt-16'>
 						<div className='flex-grow mr-8'>
 							<Textarea
@@ -203,12 +275,22 @@ const Rubric = () => {
 			{/* Item 3 rubsics which is the Evaluation Section */}
 			{selectedItem === "item4" && (
 				<div className='Evaluation Section'>
-					<Slider
-						title='Weaknesses and Limitations'
-						value={Ev1state}
-						updateAction={(newValue) => dispatch(updateEv1(newValue))}
-						id={"limitations-slider"}
-					/>
+					<div className='sm:hidden'>
+						<Slider
+							title='Limitations'
+							value={Ev1state}
+							updateAction={(newValue) => dispatch(updateEv1(newValue))}
+							id={"limitations-slider"}
+						/>
+					</div>
+					<div className='hidden sm:block'>
+						<Slider
+							title='Weaknesses and Limitations'
+							value={Ev1state}
+							updateAction={(newValue) => dispatch(updateEv1(newValue))}
+							id={"limitations-slider"}
+						/>
+					</div>
 					<Slider
 						title='Improvements'
 						value={Ev2state}
